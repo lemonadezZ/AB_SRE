@@ -9,6 +9,7 @@ yum  -y install wget
 wget https://openresty.org/download/openresty-1.11.2.1.tar.gz
 mkdir /tmp/openresty
 tar -zxvf openresty-1.11.2.1.tar.gz -C  /tmp/openresty
+rm -rf openresty-1.11.2.1.tar.gz
 cd /tmp/openresty/openresty-1.11.2.1
 ./configure
 make
@@ -18,4 +19,5 @@ export PATH=/usr/local/openresty/bin:$PATH
 yum -y install http://www.percona.com/downloads/percona-release/redhat/0.1-3/percona-release-0.1-3.noarch.rpm
 yum -y install Percona-Server-server-57
 cat /var/log/mysqld.log | grep "temporary password"
+
 rm -rf /tmp/openresty
