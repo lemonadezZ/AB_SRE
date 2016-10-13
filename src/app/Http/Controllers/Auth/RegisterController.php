@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace sheepdog\Http\Controllers\Auth;
 
-use App\User;
+use sheepdog\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use sheepdog\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller

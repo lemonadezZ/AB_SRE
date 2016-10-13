@@ -11,6 +11,13 @@
 |
 */
 
+Route::get('/phpinfo', function () {
+	git_repository_init(ENV('GIT_REPO'));
+});
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
