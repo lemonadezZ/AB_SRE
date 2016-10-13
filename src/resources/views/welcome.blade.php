@@ -72,10 +72,13 @@
                 </div>
 
 		<div class="links">
-                    <a href="{{url('login')}}">Login</a>
-                    <a href="{{url('register')}}">Signup</a>
-                    <a href="{{url('register')}}">Blog</a>
-                    <a href="{{url('register')}}">Changelog</a>
+                    <a href="{{url('login')}}">DEMO</a>
+                    <a href="{{url('http://blog.jingdor.com')}}">Blog</a>
+                    <a href="{{url('/page/changelog.html')}}">Changelog</a>
+                    <a href="{{url('/page/document.html')}}">Document</a>
+                    <a href="{{url('/page/guide.html')}}">Guide</a>
+                    <a href="{{url('https://github.com/lemonadezZ/sheepdog')}}">Github</a>
+                    <a href="{{url('https://twitter.com/jingdor1')}}">Twitter</a>
                 </div>
 
             </div>
