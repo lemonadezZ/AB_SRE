@@ -1,6 +1,6 @@
 # sheepdog
-项目管理系统
-开发阶段敬请期待
+
+ Building...
 #DEMO
 [DEMO](http://sheepdog.jingdor.com) 
 
