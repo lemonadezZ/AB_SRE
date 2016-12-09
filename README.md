@@ -1,6 +1,7 @@
 # 技术栈
 - git
 - python
+- nginx (frontend)
 
 # 优点
 - 私人订制
