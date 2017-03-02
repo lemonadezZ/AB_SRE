@@ -3,8 +3,7 @@ import tornado.web
 
 class IndexHandler(tornado.web.RequestHandler):
     def get(self):
-        items = ["Item 1", "Item 2", "Item 3"]
-        self.render("template.html", title="My title", items=items)
+        self.render("template.html", title="Hello SRE")
 
 if __name__ == "__main__":
     application = tornado.web.Application([
