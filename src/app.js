@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, Link , browserHistory} from 'react-router'
+import { render } from 'react-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 
 import App from './components/App';
@@ -9,19 +9,26 @@ import Users from './components/Users';
 import NoMatch from './components/NoMatch';
 
 
-			ReactDOM.render((
-				<Router history={browserHistory}>
+render((
+			<Router>
 
-				<Route path="/" component={App}>
-				<Route path="about" component={About}/>
-				<Route path="users" component={Users}>
-				<Route path="/user/:userId" component={Users}/>
-				</Route>
-				<Route path="*" component={NoMatch}/>
-				</Route>
-				</Router>
-			),document.getElementById('root')
-		       );
+			<div>
+				<ul>
+					<li><Link to="/">Home</Link></li>
+					<li><Link to="/about">About</Link></li>
+					<li><Link to="/users">Topics</Link></li>
+					<li><Link to="/user/aaa">Topics</Link></li>
+				</ul>
+			<hr/>
+	
+			<Route exact path="/" component={App}/>
+			<Route path="/about" component={About}/>
+			<Route path="/users" component={Users}/>
+			<Route path="/user/:id" component={Users}/>
+			</div>
+			</Router>
+       ),document.getElementById('root')
+      );
 
 
 
