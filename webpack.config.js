@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: [
-	'react-hot-loader/patch',
+//	'react-hot-loader/patch',
 	'./src/app.js'
 	],
   output: {
@@ -30,7 +30,7 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    //new webpack.HotModuleReplacementPlugin(),
     // enable HMR globally
     //
        new webpack.NamedModulesPlugin(),

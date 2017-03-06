@@ -1,21 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import { Router, Route, Link , browserHistory} from 'react-router'
+
 
 import App from './components/App';
-const render = (Component) => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component/>
-    </AppContainer>,
-    document.getElementById('root')
-  );
-};
-render(App);
+import About from './components/About';
+import Users from './components/Users';
+import NoMatch from './components/NoMatch';
 
-if (module.hot) {
-  module.hot.accept('./components/App', () => {
-    render(App)
-  });
-}
+
+			ReactDOM.render((
+				<Router history={browserHistory}>
+
+				<Route path="/" component={App}>
+				<Route path="about" component={About}/>
+				<Route path="users" component={Users}>
+				<Route path="/user/:userId" component={Users}/>
+				</Route>
+				<Route path="*" component={NoMatch}/>
+				</Route>
+				</Router>
+			),document.getElementById('root')
+		       );
+
+
 
